@@ -1,0 +1,26 @@
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = playerGui
+local triangle = Instance.new("TextLabel")
+triangle.Text = "▲"
+triangle.Size = UDim2.new(0, 100, 0, 100)
+triangle.Position = UDim2.new(0.5, -50, 0.5, -50)
+triangle.TextScaled = true
+triangle.BackgroundTransparency = 1
+triangle.Parent = screenGui
+triangle.TextColor3 = Color3.new(1, 0.75, 1)
+local destroyButton = Instance.new("TextButton")
+destroyButton.Text = "Destroy"
+destroyButton.Size = UDim2.new(0, 100, 0, 100)
+destroyButton.Position = UDim2.new(0.50, -50, 0.65, -50)
+destroyButton.TextScaled = true
+destroyButton.BackgroundTransparency = 0.75
+destroyButton.Parent = screenGui
+destroyButton.TextColor3 = Color3.new(0, 1, 1)
+
+destroyButton.MouseButton1Click:Connect(function()
+	triangle:Destroy()
+	destroyButton:Destroy()
+end)
