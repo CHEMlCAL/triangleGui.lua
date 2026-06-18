@@ -18,7 +18,7 @@ destroyButton.Position = UDim2.new(0.50, -50, 0.65, -50)
 destroyButton.TextScaled = true
 destroyButton.BackgroundTransparency = 0.75
 destroyButton.Parent = screenGui
-destroyButton.TextColor3 = Color3.new(1, 1, 1)
+destroyButton.TextColor3 = Color3.new(0.75, 1, 1)
 
 destroyButton.MouseButton1Click:Connect(function()
 	triangle:Destroy()
