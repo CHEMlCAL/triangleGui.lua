@@ -11,7 +11,7 @@ triangle.TextScaled = true
 triangle.BackgroundTransparency = 1
 triangle.Parent = screenGui
 triangle.TextColor3 = Color3.new(1, 1, 1)
-triangle.Rotation = triangle.Rotation + 2
+triangle.Rotation = 0
 local destroyButton = Instance.new("TextButton")
 destroyButton.Text = "Destroy"
 destroyButton.Size = UDim2.new(0, 100, 0, 100)
@@ -25,3 +25,10 @@ destroyButton.MouseButton1Click:Connect(function()
 	triangle:Destroy()
 	destroyButton:Destroy()
 end)
+
+local spinning = true
+
+while spinning do
+	triangle.Rotation = triangle.Rotation + 1
+	wait(0.01)
+end
