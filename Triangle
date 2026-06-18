@@ -11,6 +11,7 @@ triangle.TextScaled = true
 triangle.BackgroundTransparency = 1
 triangle.Parent = screenGui
 triangle.TextColor3 = Color3.new(1, 1, 1)
+triangle.Rotation = triangle.Rotation + 2
 local destroyButton = Instance.new("TextButton")
 destroyButton.Text = "Destroy"
 destroyButton.Size = UDim2.new(0, 100, 0, 100)
